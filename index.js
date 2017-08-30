@@ -11,6 +11,3 @@ app.listen(app.get('port'), function(){
 
 config(app);
 
-app.get('/', function(req, res){
-  res.render('home');
-});
