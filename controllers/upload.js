@@ -1,13 +1,10 @@
-var path = require('path');
-var multer = require('multer');
-var upload = multer({dest: path.join(__dirname, '../public/uploads')});
 
 module.exports = {
     indexGet: function(req, res){
         res.render('uploadGet');
     },
     indexPost: function(req, res){
-        upload.single('Santander.ofx');
+        console.log(req.file);
         res.render('home',{remark:'File Saved'});
     }
 }
