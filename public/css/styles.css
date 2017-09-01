@@ -64,3 +64,51 @@ header {
     font-size: 8rem
 }
 
+/* ----- LOGIN PAGE ----- */
+body {
+    background: green;
+}
+.login-page {
+    width: 360px;
+    padding: 8% 0;
+    margin: auto;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: white;
+    margin: 0, auto;
+    text-align: center;
+    padding: 45px;
+}
+.form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #EFECEC;
+    font-size: 100%;
+    border: none;
+}
+.form .button {
+    background: #4CAF50;
+    text-transform: uppercase;
+    padding: 15px;
+    color: white;
+}
+.toggle {
+    display: none;
+}
+.form .register-form {
+    display: none;
+}
+.form .message {
+    font-size: 90%;
+    color: #CFCFCF;
+    margin-top: 15px;
+}
+.form .message a {
+    font-size: 90%;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
