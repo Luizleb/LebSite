@@ -8,3 +8,6 @@ mongoose.connection.on('open', function(err, db){
         console.log('Connected to Mongoose !');
     }
 });
+var db = mongoose.connection;
+
+module.exports = db;
