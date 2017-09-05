@@ -19,10 +19,6 @@ var UserSchema = new Schema({
     password: {
         type: String,
         required: true
-    },
-    passwordConf: {
-        type: String,
-        required: true
     }
 });
 
@@ -36,14 +32,15 @@ UserSchema.statics.authenticate = function(email, password, callback){
             var err = new Error('User not found');
             err.status = 401;
             return callback(err);
-        }
-        bcrypt.compare(password, user.password,function(err, result){
-            if(err){
-                return callback(err);
-            } else {
-                return callback(null, user);
-            }
-        });
+        } else {
+            bcrypt.compare(password, user.password,function(err){
+                if(err){
+                    return callback(err);
+                } else {
+                    return callback(null, user);
+                }
+            });
+        }  
     });
 }
 

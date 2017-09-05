@@ -24,23 +24,29 @@ header {
     height: 100vh;
     background-attachment: fixed;
 }
-.main-nav, .main-nav-login {
+.main-nav,.logged-nav, .main-nav-login, .logged-nav-logout {
     list-style: none;
     margin-top: 50px;
 }
-.main-nav {
+.main-nav, .logged-nav {
     float: left;
 }
-.main-nav-login {
+.main-nav-login, .logged-nav-logout {
     float: right;
 }
-.main-nav li, .main-nav-login li{
+.main-nav li, .main-nav-login li, .logged-nav li, .logged-nav-logout li{
     display: inline-block;
     margin-left: 40px;
 }
 .main-nav li a, .main-nav-login li a{
     text-decoration: none;
     color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.logged-nav li a, .logged-nav-logout li a{
+    text-decoration: none;
+    color: #808080;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -65,7 +71,8 @@ header {
 }
 
 /* ----- LOGIN PAGE ----- */
-body {
+.login-wrapper {
+    width: 100%;
     background: green;
 }
 .login-page {
@@ -111,4 +118,16 @@ body {
     color: #4CAF50;
     text-decoration: none;
 }
+.logged {
+    font-size: 90%;
+}
 
+/* ----- ERRORS ----- */
+
+.error-message {
+    max-width: 300px;
+    margin: 45px auto;
+}
+.error-message h3 {
+    margin: 15px auto;
+}

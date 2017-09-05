@@ -34,15 +34,15 @@ app.use(session({
 
 // catch status 404 and forward to error handler
     app.use(function(err, req, res, next){
-        var err = new Error('File not found.');
+        var err = err || new Error('File not found.');
         res.status = 404;
         next(err);
     });
 
 // error handler - Defined as the last app.use callback
     app.use(function(err, req, res, next){
-        res.status(err.status || 500);
-        res.send(err.message);
+        res.status = err.status || 500;
+        res.render('loginErr', {msg: err.message});
     });
     
     return app;
