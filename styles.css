@@ -18,11 +18,11 @@ html, body {
 
 /* ----- HEADER ----- */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30),rgba(0,0,0,0.3)), url("../images/background.jpg");
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.30),rgba(0,0,0,0.3)), url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 .main-nav,.logged-nav, .main-nav-login, .logged-nav-logout {
     list-style: none;
