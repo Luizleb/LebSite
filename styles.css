@@ -110,6 +110,7 @@ header {
 }
 .form .message {
     font-size: 90%;
+   
     color: #CFCFCF;
     margin-top: 15px;
 }
@@ -130,4 +131,8 @@ header {
 }
 .error-message h3 {
     margin: 15px auto;
+}
+
+.resume * {
+    margin: 15px;
 }
