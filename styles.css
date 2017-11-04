@@ -1,13 +1,18 @@
+/* ----- COLORS ----- */
+
+
 /* ----- BASIC SETUP ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
+body {
     background-color:#fff;
-    font-size: 14px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Open Sans", sans-serif;
+    padding: 30px;
 }
 
 /* ----- REUSABLE COMPONENTS ----- */
@@ -17,122 +22,101 @@ html, body {
 }
 
 /* ----- HEADER ----- */
-header {
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.30),rgba(0,0,0,0.3)), url("../images/background.jpg");
+.header {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(2, 90, 21, 0.20),
+        rgba(4, 161, 35, 0.20)),
+        url(./images/background.jpg);
     background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-attachment: fixed;*/
-}
-.main-nav,.logged-nav, .main-nav-login, .logged-nav-logout {
-    list-style: none;
-    margin-top: 50px;
-}
-.main-nav, .logged-nav {
-    float: left;
-}
-.main-nav-login, .logged-nav-logout {
-    float: right;
-}
-.main-nav li, .main-nav-login li, .logged-nav li, .logged-nav-logout li{
-    display: inline-block;
-    margin-left: 40px;
-}
-.main-nav li a, .main-nav-login li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-.logged-nav li a, .logged-nav-logout li a{
-    text-decoration: none;
-    color: #808080;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-.name-text-box {
-    position: absolute;
-    width: 800px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Verdana;
-    font-size: 2rem;
-    color: #4F4F4F;
-    word-spacing: 0.5rem;
-    letter-spacing: 0.2rem;
-    white-space: pre;
-}
-.name-capital{
-    font-family: 'Trebuchet MS';
-    font-weight: normal;
-    color: #003600;
-    font-size: 8rem
-}
-
-/* ----- LOGIN PAGE ----- */
-.login-wrapper {
-    width: 100%;
-    background: green;
-}
-.login-page {
-    width: 360px;
-    padding: 8% 0;
-    margin: auto;
-}
-.form {
+    background-position: top;
+    height: 95vh;
+    background-attachment: fixed;
+    /*clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);*/
     position: relative;
-    z-index: 1;
-    background: white;
-    margin: 0, auto;
+}
+
+.text-box {
+    position: absolute;
+    top: 70%;
+    left: 50%;
     text-align: center;
-    padding: 45px;
+    transform: translate(-50%,-50%);
 }
-.form input {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 15px;
-    background: #EFECEC;
-    font-size: 100%;
-    border: none;
+
+.head-primary {
+    color: #fff;
+    font-family: "Varela" sans-serif;
+    backface-visibility: hidden;
+    margin-bottom: 2em;
 }
-.form .button {
-    background: #4CAF50;
-    text-transform: uppercase;
-    padding: 15px;
-    color: white;
+
+.head-primary-main {
+    display: block;
+    font-size: 2em;
+    letter-spacing: 1px;
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
-.toggle {
-    display: none;
+
+.head-primary-sub {
+    display: block;
+    font-size: 1.5 em;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    animation-name: moveFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
-.form .register-form {
-    display: none;
+
+@keyframes moveFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
-.form .message {
-    font-size: 90%;
-   
-    color: #CFCFCF;
-    margin-top: 15px;
+
+@keyframes moveFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
-.form .message a {
-    font-size: 90%;
-    color: #4CAF50;
+
+.btn:link, .btn:visited {
     text-decoration: none;
-}
-.logged {
-    font-size: 90%;
-}
-
-/* ----- ERRORS ----- */
-
-.error-message {
-    max-width: 300px;
-    margin: 45px auto;
-}
-.error-message h3 {
-    margin: 15px auto;
+    padding: 0.8em;
+    display: inline-block;
+    border-radius: 1em;
+    transition: all 0.2s;
 }
 
-.resume * {
-    margin: 15px;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
