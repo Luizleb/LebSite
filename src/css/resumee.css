@@ -1,0 +1,37 @@
+.resumee {
+    width:80%;
+    margin-left: 10rem;
+    font-size: 1.3rem;
+    line-height: 2.0rem;
+}
+
+.resumee h1, h2 {
+    padding:.6rem;
+}
+
+.resumee h3, h4, li, p {
+    padding:.4rem;
+}
+
+.resumee h1 {
+    background: lightgray;
+}
+
+.resumee h2 {
+    text-decoration-line: underline;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.resumee h3, h4 {
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.resumee li {
+    margin-left: 5rem;
+}
+
+.resumee p {
+    margin-left: 2.5rem;
+}

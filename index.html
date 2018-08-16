@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LebSite</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/resumee.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <!-- Scripts -->
+    <script src="./src/js/shell.js"></script>
+    <script src="./src/js/about.js"></script>
+    <script src="./src/js/resumee.js"></script>
+    <script src="./src/js/home.js"></script>
+    <script src="./src/js/main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="text-box">
-            <h1 class="head-primary">
-                <span class="head-primary-main">Luiz Eduardo Batista</span>
-                <span class="head-primary-sub">LEB</span>
-            </h1>
-            <a href="#" class="btn btn-white">Currículo</a>   
-        </div>   
-    </header>  
+    <header class="header"></header>
+    <div class="content">
+        <nav class="content-sidebar">
+            <ul>
+                <li><i class="fas fa-home"></i><a href="#" data-link-id="1">Home</a></li>
+                <li><i class="far fa-user"></i></i><a href="#" data-link-id="2">About</a></li>
+                <li><i class="far fa-file-alt"></i><a href="#" data-link-id="3">Resumeé</a></li>
+                <li><i class="fas fa-industry"></i><a href="#" data-link-id="4">Projects</a></li>
+                <li><i class="far fa-address-card"></i><a href="#" data-link-id="5">Contact</a></li>
+            </ul>
+        </nav>
+        <main class="content-main content-background" id="content-main"></main>
+    </div>
+    <footer class="footer">
+        <hr>
+        <small>Copyright &copy; LEB - 2018</small>
+    </footer>
 </body>
 </html>

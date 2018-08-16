@@ -1,0 +1,112 @@
+/* ----- COLORS ----- */
+
+
+/* ----- BASIC SETUP ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color:#fff;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* ----- REUSABLE COMPONENTS ----- */
+
+
+/* -------- HEADER --------- */
+
+/* -------- CONTENT -------- */
+.content {
+    display: flex;
+}
+
+/* -------- SIDEBAR ------- */
+.content-sidebar {
+    flex: 0 0 15%;
+}
+
+.content-sidebar ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.content-sidebar li a {
+    text-decoration: none;
+}
+
+.content-sidebar li a:link,
+.content-sidebar li a:visted {
+    border-bottom: .4rem solid transparent;
+    text-decoration: none;
+    transition: border-bottom 0.2s;
+}
+
+.content-sidebar li a:hover,
+.content-sidebar li a:active {
+    border-bottom: .4rem solid orange;
+}
+
+i {
+    margin-right: 1rem;
+    color: green;
+}
+
+/* ----- MAIN CONTENT ----- */
+.content-main {
+    flex: 1; 
+    position: relative;
+    height: 95vh;
+}
+
+.content-background {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(2, 90, 21, 0.20),
+        rgba(4, 161, 35, 0.20)),
+        url(../images/background.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.head-primary {
+    color: #fff;
+    margin-bottom: 2em;
+}
+
+.head-primary-main {
+    display: block;
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+}
+
+.head-primary-sub {
+    display: block;
+    font-size: 1.1em;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    font-size: 1.2rem;
+    color: rgb(170, 170, 170);
+    text-align: center;
+}
