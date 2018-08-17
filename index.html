@@ -9,26 +9,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/resumee.css">
+    <link rel="stylesheet" href="./src/css/projects.css">
     <link rel="stylesheet" href="./src/css/main.css">
     <!-- Scripts -->
-    <script src="./src/js/shell.js"></script>
+    <script src="./src/data/projects-data.js"></script>
+    <script src="./src/js/model.js"></script>
     <script src="./src/js/about.js"></script>
     <script src="./src/js/resumee.js"></script>
     <script src="./src/js/home.js"></script>
+    <script src="./src/js/projects.js"></script>
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/shell.js"></script>
 </head>
 <body>
     <header class="header"></header>
     <div class="content">
-        <nav class="content-sidebar">
-            <ul>
-                <li><i class="fas fa-home"></i><a href="#" data-link-id="1">Home</a></li>
-                <li><i class="far fa-user"></i></i><a href="#" data-link-id="2">About</a></li>
-                <li><i class="far fa-file-alt"></i><a href="#" data-link-id="3">Resumeé</a></li>
-                <li><i class="fas fa-industry"></i><a href="#" data-link-id="4">Projects</a></li>
-                <li><i class="far fa-address-card"></i><a href="#" data-link-id="5">Contact</a></li>
-            </ul>
-        </nav>
+        <nav class="content-sidebar" id="content-sidebar"></nav>
         <main class="content-main content-background" id="content-main"></main>
     </div>
     <footer class="footer">
