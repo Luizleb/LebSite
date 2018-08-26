@@ -6,14 +6,13 @@ const projects = (function(){
         const data = model.getProjectInfo(id);
         if(id < 6) {
             let html = `
-                <h2>${data.name}</h2>
-                <h4>${data.company}</h4>
-                <h4>${data.year}</h4>
-                <p>${data.description}</p>
-                <div>
+                <h2 class="projects-name">${data.name}</h2>
+                <h4 class="projects-company">${data.company} - ${data.year}</h4>
+                <p class="projects-description">${data.description}</p>
+                <div class="gallery">
             `;
             data.images.forEach(function(image){
-                html += `<img src="./src/images/${image}">`;
+                html += `<figure class="gallery-item"><img src="./src/images/${image}" class="gallery-photo"></figure>`;
             });
             html += `</div`;
             elemMap.container.innerHTML = html;
@@ -37,7 +36,7 @@ const projects = (function(){
         });
         htmlSidebar += `<li><a href="#" data-link-id="${menu.length+1}">Home</a></li></ul>`;
 
-        const htmlContent = `<h2>Test projects</h2>`;
+        const htmlContent = `<h2 class="projects-home">A brief description of the main Projects I took part along my carrer.</h2>`;
 
         sidebar.innerHTML = htmlSidebar;
         main.innerHTML = htmlContent;

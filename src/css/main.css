@@ -32,11 +32,17 @@ body {
 /* -------- SIDEBAR ------- */
 .content-sidebar {
     flex: 0 0 15%;
+    background-color: lightgray;
+    padding-top: 5rem;
 }
 
 .content-sidebar ul {
     list-style: none;
     margin-left: 1rem;
+}
+
+.content-sidebar li {
+    margin-top: 3rem;;
 }
 
 .content-sidebar li a {

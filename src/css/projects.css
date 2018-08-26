@@ -1,4 +1,32 @@
 
-img {
-    height: 30rem;
+.projects-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lora', serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.projects-name, .projects-company {
+    text-align: center;
+}
+
+.projects-description {
+    font-size: 1.2rem;
+    width: 70%;
+    color: gray;
+    margin: 2rem auto;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-photo {
+    display:block;
+    width: 50rem;
+    margin: 2rem auto;
 }

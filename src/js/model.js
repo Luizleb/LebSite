@@ -1,6 +1,6 @@
 const model = (function(){
     var data = projectsData.getProjectsData();
-    
+     
     function getProjectNames() {
         let result = [];
         data.forEach(function(project){
