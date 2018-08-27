@@ -1,28 +1,42 @@
 const home = (function(){
     var elemMap = {};
+    var stateMap = {currPage:"Home"};
     // set the event listeners to the sidebar items
     function listenClick(evt) {
         let id = evt.target.getAttribute("data-link-id");
         switch(id) {
             case "1": // home
+                headObserver.notify(evt.target.textContent);
                 toggleClass(elemMap.container,"content-background",false);
                 home.render(elemMap.container,elemMap.menu);
                 break;
             case "2": // about
+                headObserver.notify(evt.target.textContent);
                 toggleClass(elemMap.container,"content-background",true);
                 about.render(elemMap.container);
                 break;
             case "3": // resumee
+                headObserver.notify(evt.target.textContent);
                 toggleClass(elemMap.container,"content-background",true);
                 resumee.render(elemMap.container);
                 break;
             case "4": // projects
+                headObserver.notify(evt.target.textContent);
                 toggleClass(elemMap.container,"content-background",true);
                 elemMap.menu.removeEventListener("click", listenClick);
                 projects.render(elemMap.container,elemMap.menu);
                 break;
         }
     };
+
+    // testing state management based on Observer pattern
+    function mapID(text) {
+        document.querySelector(".header").textContent = text;
+    };
+    var headObserver = Object.create(util.observable);
+    headObserver.subscribe(mapID);
+
+
 
     // toggle the class if the class already exists (true) or if it not exists (false)
     function toggleClass(elem, classname, tag) {
@@ -40,6 +54,7 @@ const home = (function(){
 
     render = function(main, sidebar) {
         setElemMap(main, sidebar);
+        headObserver.notify("Home");
         let menu = ["Home","About","Resumeé","Projects","Contact"];
         let icons = ["fas fa-home","far fa-user","far fa-file-alt","fas fa-industry","far fa-address-card"];
         let htmlSidebar = "<ul>";
