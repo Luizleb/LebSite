@@ -1,6 +1,6 @@
 const home = (function(){
     var elemMap = {};
-    // set the event listeners at the sidebar items
+    // set the event listeners to the sidebar items
     function listenClick(evt) {
         let id = evt.target.getAttribute("data-link-id");
         switch(id) {

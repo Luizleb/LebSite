@@ -20,7 +20,10 @@ body {
 }
 
 /* ----- REUSABLE COMPONENTS ----- */
-
+.header {
+    margin-left: 1rem;
+    font-size: 85%;
+}
 
 /* -------- HEADER --------- */
 
@@ -70,7 +73,7 @@ i {
 .content-main {
     flex: 1; 
     position: relative;
-    height: 95vh;
+    min-height: 95vh;
 }
 
 .content-background {
